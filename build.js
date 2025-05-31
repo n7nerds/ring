@@ -7,30 +7,35 @@ import yaml from "yaml"
  */
 const members = yaml.parse(readFileSync("members.yaml", "utf8"))
 
-writeFileSync("index.html", compileFile("index.pug")({ members }))
+mkdirSync("public")
+
+writeFileSync("public/index.html", compileFile("index.pug")({ members }))
 
 for (const [i, member] of members.entries()) {
   const { id } = member
 
-  mkdirSync(`${id}/prev`, { recursive: true })
-  mkdirSync(`${id}/next`, { recursive: true })
+  mkdirSync(`public/${id}/prev`, { recursive: true })
+  mkdirSync(`public/${id}/next`, { recursive: true })
 
   // Main redirection page
-  writeFileSync(`${id}/index.html`, redirectionPage(member.url))
+  writeFileSync(`public/${id}/index.html`, redirectionPage(member.url))
 
   // Next member arrow (allow /next.html and /next)
   const nextMember = members[(i + 1) % members.length]
-  writeFileSync(`${id}/next.html`, redirectionPage(nextMember.url))
-  writeFileSync(`${id}/next/index.html`, redirectionPage(nextMember.url))
+  writeFileSync(`public/${id}/next.html`, redirectionPage(nextMember.url))
+  writeFileSync(`public/${id}/next/index.html`, redirectionPage(nextMember.url))
 
   // Previous member arrow (allow /prev.html and /prev)
   const previousMember = members[(i - 1 + members.length) % members.length]
-  writeFileSync(`${id}/prev.html`, redirectionPage(previousMember.url))
-  writeFileSync(`${id}/prev/index.html`, redirectionPage(previousMember.url))
+  writeFileSync(`public/${id}/prev.html`, redirectionPage(previousMember.url))
+  writeFileSync(
+    `public/${id}/prev/index.html`,
+    redirectionPage(previousMember.url)
+  )
 
   // Button HTML fragment
   writeFileSync(
-    `${id}/button.html`,
+    `${id}/buttonpublic/.html`,
     compileFile("button.pug")({
       member,
       baseURL: process.env.BASE_URL || "https://n7webring.neocities.org",
