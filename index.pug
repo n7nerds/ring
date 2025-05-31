@@ -8,4 +8,6 @@ body
 
   ul
     each member in members
-      li: a(href=member.url)= member.name
+      li
+        a(href=member.url)= member.name
+        iframe(src=`/${member.id}/button.html`)
