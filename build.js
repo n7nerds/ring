@@ -35,7 +35,7 @@ for (const [i, member] of members.entries()) {
 
   // Button HTML fragment
   writeFileSync(
-    `${id}/buttonpublic/.html`,
+    `public/${id}/button.html`,
     compileFile("button.pug")({
       member,
       baseURL: process.env.BASE_URL || "https://n7webring.neocities.org",
