@@ -1,0 +1,21 @@
+name: Build and deploy to neocities!
+
+on:
+  push: { branches: [main] }
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build site
+        run: |
+          npm install
+          npm run build
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v3.0.2
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_KEY }}

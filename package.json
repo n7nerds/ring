@@ -1,0 +1,23 @@
+{
+  "name": "n7webring",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/n7webring/ring#readme",
+  "bugs": {
+    "url": "https://github.com/n7webring/ring/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n7webring/ring.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js "
+  },
+  "dependencies": {
+    "pug": "^3.0.3",
+    "yaml": "^2.8.0"
+  }
+}

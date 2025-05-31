@@ -1,0 +1,11 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title n7 webring!
+body
+  h1 Bienvenue sur le #[a(href='https://en.wikipedia.org/wiki/Webring') webring] des étudiant·e·s de l'#[a(href='https://enseeiht.fr') ENSEEIHT]!
+
+  ul
+    each member in members
+      li: a(href=member.url)= member.name
