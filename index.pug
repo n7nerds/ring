@@ -15,8 +15,11 @@ body(lang="en")
   ul.members
     each member in members
       li: a.member(href=member.url)
-        img(src=`https://avatars.githubusercontent.com/u/${member.github}?v=4` alt=`Photo de ${member.name}`)
+        img.pfp(src=`https://avatars.githubusercontent.com/u/${member.github}?v=4` alt=`Photo de ${member.name}`)
         span.name=member.name
+    li: a.member.new(href="https://github.com/n7webring/ring/edit/main/members.yaml")
+        .pfp.empty
+        span.name You?
 
   style.
     .member {
@@ -26,11 +29,15 @@ body(lang="en")
       align-items: center;
     }
 
-    .member img {
+    .member .pfp {
       height: 1.5em;
       width: 1.5em;
       border-radius: 1000000px;
       object-fit: cover; 
+    }
+
+    .member .pfp.empty {
+      border: 2px gray dashed;
     }
 
     ul.members {
