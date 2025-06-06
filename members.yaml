@@ -4,6 +4,8 @@
 #   github: ton id github: va sur https://api.github.com/users/tonlogingithub, par exemple https://api.github.com/users/gwennlbh, et prend le numéro "id: "
 #   url: URL vers ton site. Le site doit comporter deux boutons pour aller au site précédent, au site suivant et sur la page du webring. Evite de l'enfouir sous un scroll tres long, le but est de pouvoir naviguer de site en site plutôt facilement
 #        si tu veux un code HTML à copier-coller, tu peux regarder view-source:https://n7webring.neocities.org/laurent/button (en remplaçant "laurent" dans le code par ton 'name') (TODO: mettre un /button.html à la place)
+#        lien vers le site précédent: https://n7webring.neocities.org/(id)/prev  (remplace (id) par ton id)
+#        lien vers le site suivant:   https://n7webring.neocities.org/(id)/next  (remplace (id) par ton id)
 
 - id: cece
   name: Céleste Tiano
