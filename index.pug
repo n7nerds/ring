@@ -6,7 +6,7 @@ head
 body
   h1 Bienvenue sur le #[a(href='https://en.wikipedia.org/wiki/Webring') webring] des étudiant·e·s de l'#[a(href='https://enseeiht.fr') ENSEEIHT]!
 
-  ul
+  ul.members
     each member in members
       li: a.member(href=member.url)
         img(src=`https://avatars.githubusercontent.com/u/${member.github}?v=4` alt=`Photo de ${member.name}`)
@@ -15,7 +15,9 @@ body
   style.
     .member {
       display: flex;
-      gap: 0.75em;
+      gap: 0.25em;
+      font-size: 2em;
+      align-items: center;
     }
 
     .member img {
@@ -23,3 +25,21 @@ body
       width: 1em;
       object-fit: cover;
     }
+
+    ul.members {
+      list-style: none;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Iosevka NFM, Iosevka, Segoe UI, Ubuntu Sans, sans-serif;
+    }
+
