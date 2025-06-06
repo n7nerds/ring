@@ -8,4 +8,18 @@ body
 
   ul
     each member in members
-      li: a(href=member.url)= member.name
+      li: a.member(href=member.url)
+        img(src=`https://avatars.githubusercontent.com/u/${member.github}?v=4` alt=`Photo de ${member.name}`)
+        span.name=member.name
+
+  style.
+    .member {
+      display: flex;
+      gap: 0.75em;
+    }
+
+    .member img {
+      height: 1em;
+      width: 1em;
+      object-fit: cover;
+    }
