@@ -1,15 +1,26 @@
+# Rajoute-toi à la fin du fichier:
+# - id: un nom ou pseudo, sans espaces, qui doit être unique par rapport aux autres noms
+#   name: ton nom, affiché sur le site du webring
+#   github: ton id github: va sur https://api.github.com/users/tonlogingithub, par exemple https://api.github.com/users/gwennlbh, et prend le numéro "id: "
+#   url: URL vers ton site. Le site doit comporter deux boutons pour aller au site précédent, au site suivant et sur la page du webring. Evite de l'enfouir sous un scroll tres long, le but est de pouvoir naviguer de site en site plutôt facilement
+#        si tu veux un code HTML à copier-coller, tu peux regarder view-source:https://n7webring.neocities.org/laurent/button (en remplaçant "laurent" dans le code par ton 'name') (TODO: mettre un /button.html à la place)
+
 - id: cece
   name: Céleste Tiano
+  github: 103273947
   url: https://sweetcheesecrepes.neocities.org/
 
 # - id: gwenn
 #  name: Gwenn Le Bihan
+#  github: 39094199
 #  url: https://gwen.works
 
 - id: laurent
   name: Laurent Fainsin
+  github: 21087104
   url: https://laurent.fainsin.bzh
 
 - id: gautier
   name: Gautier Ben Aïm
+  github: 48261497
   url: https://gautier.dev
