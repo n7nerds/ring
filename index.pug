@@ -3,8 +3,13 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title n7 webring!
-body
-  h1 Bienvenue sur le #[a(href='https://en.wikipedia.org/wiki/Webring') webring] des étudiant·e·s de l'#[a(href='https://enseeiht.fr') ENSEEIHT]!
+  style.
+    @font-face {
+      font-family: "0xProto";
+      src: url('https://github.com/0xType/0xProto/raw/refs/heads/main/fonts/0xProto-Regular.woff2') format('woff2');
+    }
+body(lang="en")
+  h1 Welcome to #[a(href='https://enseeiht.fr') ENSEEIHT] students' #[a(href='https://en.wikipedia.org/wiki/Webring') webring]!
 
   ul.members
     each member in members
@@ -41,6 +46,6 @@ body
       height: 100vh;
       margin: 0;
       padding: 0;
-      font-family: Iosevka NFM, Iosevka, Segoe UI, Ubuntu Sans, sans-serif;
+      font-family: "0xProto", Iosevka NFM, Iosevka, Segoe UI, Ubuntu Sans, sans-serif;
     }
 
