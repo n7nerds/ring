@@ -2,12 +2,18 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs"
 import { compileFile } from "pug"
 import yaml from "yaml"
 
+
+mkdirSync("public")
+
+// BlUwUsky account
+
+mkdirSync("public/.well-known/atproto-did", {recursive: true})
+writeFileSync("public/.well-known/atproto-did/index.html", "did:plc:pdy5xfirwmnopisb7wnwwaq6")
+
 /**
  * @type {Array<{id: string, url: string, name: string}>}
  */
 const members = yaml.parse(readFileSync("members.yaml", "utf8"))
-
-mkdirSync("public")
 
 writeFileSync("public/index.html", compileFile("index.pug")({ members }))
 
