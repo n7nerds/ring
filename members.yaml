@@ -10,12 +10,12 @@
 - id: cece
   name: Céleste Tiano
   github: 103273947
-  url: https://sweetcheesecrepes.neocities.org/
+  url: http://goupiliot.fr/sweetcheesecrepes/
 
 - id: gwenn
   name: Gwenn Le Bihan
   github: 39094199
-  url: https://beta.gwen.works
+  url: https://gwen.works
 
 - id: laurent
   name: Laurent Fainsin
@@ -26,3 +26,4 @@
   name: Gautier Ben Aïm
   github: 48261497
   url: https://gautier.dev
+
